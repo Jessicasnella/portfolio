@@ -1,0 +1,177 @@
+/* background-image: linear-gradient(left, rgba(143, 8, 41, 1), rgba(217, 4, 41, 1)); */
+
+/* HEADER */
+main > header, article.hero header {
+  display: flex;
+  flex-direction: row;
+  width: 100% !important;
+  justify-content: space-between;
+}
+  article.hero header {
+    position: fixed;
+    z-index: 1000;
+  }
+  main > header .w--3of4, article.hero header .w--3of4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 0 0 75% !important;
+  }
+  main > header .w--1of4, article.hero header .w--1of4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    flex: 0 0 25% !important;
+  }
+  main > header .w--1of1, article.hero header .w--1of1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 0 0 100% !important;
+  }
+
+
+
+/* MAIN and SECTION */
+main.home {
+  background: rgb(34, 34, 34);
+  border-top: 10px solid rgb(220, 4, 43);
+}
+section {
+  padding: 4em 0;
+}
+  section.highlight {
+    background: rgb(34, 34, 34);
+    color: rgb(170, 170, 170);
+  }
+    section.highlight h1, section.highlight h2, section.highlight h3, section.highlight h4, section.highlight h5, section.highlight h6, label {
+      color: rgb(210, 210, 210);
+    }
+    section.highlight .lightened {
+      color: rgb(217, 4, 41);
+    }
+  section.about .w--1of4 {
+    flex: 1 0 calc(50%);
+  }
+    @media screen and (min-width: 1200px) {
+      section.about .w--1of4 {
+        flex: 1 0 calc(25%);
+      }
+    }
+  section.portfolio [class*='w--'] {
+    background-size: cover !important;
+    height: 37.5vh;
+    min-height: 15em;
+  }
+    section.portfolio .w--1of1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    section.portfolio .w--1of4 {
+      flex: 1 0 calc(50%);
+      height: 50vw;
+    }
+    @media screen and (min-width: 800px) {
+      section.portfolio .w--1of4 {
+        flex: 1 0 calc(25%);
+        height: 20vh;
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      section.portfolio .w--1of1 {
+        height: 75vh;
+      }
+      section.portfolio .w--1of2 {
+        height: 46.875vh;
+      }
+      section.portfolio .w--2of3 {
+        height: 56.25vh;
+      }
+    }
+    @media screen and (min-width: 800px) and (max-width: 1199px) {
+      section.portfolio .w--1of3, section.portfolio .w--2of3 {
+        flex: 1 0 calc(50%);
+      }
+    }
+    section.portfolio figure {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    section.profile .row {
+      display: flex;
+      flex-direction: row;
+    }
+    section.profile h1, section.profile h2, section.profile h3, section.profile h4, section.profile h5, section.profile h6 {
+      color: rgb(217, 4, 41);
+    }
+      section.profile [class*='w--'] {
+        flex-direction: column;
+      }
+      section.profile h4 {
+        color: rgb(117, 117, 117);
+      }
+        section.profile h4 .lightened {
+          color: rgb(170, 170, 170);
+        }
+
+
+
+/* FOOTER */
+main > footer .w--1of2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 0 calc(50%);
+}
+  main > footer h6 {
+    letter-spacing: 0;
+  }
+    main.home > footer h6 {
+      color: rgb(217, 4, 41);
+    }
+
+
+
+.colored {
+  background: rgba(170, 170, 170, 0.1);
+}
+
+
+
+.main-logo {
+  display: inline-block;
+}
+  a.logo-container::before {
+    content: '' !important;
+    height: 0 !important;
+    width: 0 !important;
+    display: inline-block !important;
+    background: none !important;
+    opacity: 0 !important;
+  }
+  svg.main-logo {
+    height: 2rem;
+  }
+  footer svg.main-logo {
+    height: 1rem;
+  }
+svg.main-logo use {
+  fill: rgb(220, 4, 43);
+}
+  main.work svg.main-logo use {
+    fill: white;
+  }
+footer use {
+  fill: rgb(34, 34, 34);
+}
+  main.home footer use {
+    fill: rgb(217, 4, 41);
+  }
+svg path {
+  fill: inherit;
+}
